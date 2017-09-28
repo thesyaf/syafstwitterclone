@@ -1,0 +1,23 @@
+<h1><%= @brand %></h1>
+
+<%= image_tag "burgerheart.gif" %>
+<table>
+  <thead>
+    <tr>
+      <th>Top 5</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topten.each do |tweet| %>
+      <tr>
+        <td><%= tweet.message %></td>
+        <td><%= tweet.created_at.strftime("%I:%M%p  -  %d %b %Y") %>
+
+      </tr>
+      <tr>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
